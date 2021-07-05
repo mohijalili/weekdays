@@ -33,6 +33,9 @@
     "calendar-e2e": {
       "tags": [],
       "implicitDependencies": ["calendar"]
+    },
+    "web-shell-ui-layout": {
+      "tags": []
     }
   }
 }
