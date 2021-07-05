@@ -1,7 +1,13 @@
 @import 'styles-variables';
 
+html,
 body {
-  background: map-get($map: $colors, $key: bg);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: $font-normal $font-size $font-family !important;
 }
 
 $sizes: 48;
