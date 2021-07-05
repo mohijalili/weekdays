@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@study-smarter/web/shell/feature/web-shell": [
+        "libs/web/shell/feature/web-shell/src/index.ts"
+      ],
       "@study-smarter/web/shell/ui/layout": [
         "libs/web/shell/ui/layout/src/index.ts"
       ]
