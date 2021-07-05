@@ -1,0 +1,241 @@
+// Padding
+// ─────────────────────────────────────
+@mixin padding($val) {
+  padding: $val !important;
+  &-t {
+    padding-top: $val !important;
+  }
+  &-r {
+    padding-right: $val !important;
+  }
+  &-b {
+    padding-bottom: $val !important;
+  }
+  &-l {
+    padding-left: $val !important;
+  }
+}
+@mixin remove-padding() {
+  padding: 0 !important;
+  &-t {
+    padding-top: 0 !important;
+  }
+  &-r {
+    padding-right: 0 !important;
+  }
+  &-b {
+    padding-bottom: 0 !important;
+  }
+  &-l {
+    padding-left: 0 !important;
+  }
+}
+
+// Margin
+// ─────────────────────────────────────
+@mixin margin($val) {
+  margin: $val !important;
+
+  &-t {
+    margin-top: $val !important;
+  }
+  &-r {
+    margin-right: $val !important;
+  }
+  &-b {
+    margin-bottom: $val !important;
+  }
+  &-l {
+    margin-left: $val !important;
+  }
+}
+@mixin remove-margin() {
+  margin: 0 !important;
+
+  &-t {
+    margin-top: 0 !important;
+  }
+  &-r {
+    margin-right: 0 !important;
+  }
+  &-b {
+    margin-bottom: 0 !important;
+  }
+  &-l {
+    margin-left: 0 !important;
+  }
+}
+// border-radius
+// ─────────────────────────────────────
+@mixin round($val) {
+  border-radius: $val !important;
+}
+@mixin remove-margin() {
+  margin: 0 !important;
+
+  &-t {
+    margin-top: 0 !important;
+  }
+  &-r {
+    margin-right: 0 !important;
+  }
+  &-b {
+    margin-bottom: 0 !important;
+  }
+  &-l {
+    margin-left: 0 !important;
+  }
+}
+
+// Text Variant
+// ─────────────────────────────────────
+@mixin text-variant($class, $color) {
+  .#{$class} {
+    color: $color !important;
+  }
+
+  a.#{$class} {
+    color: $color !important;
+    text-decoration: none !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color !important;
+      opacity: 0.8 !important;
+      text-decoration: none !important;
+    }
+  }
+}
+// breakpoint
+// ─────────────────────────────────────
+@mixin breakpoint($point) {
+  @if $point==xs {
+    @media (max-width: 559px) {
+      @content;
+    }
+  } @else if $point==sm {
+    @media (min-width: 600px) and (max-width: 959px) {
+      @content;
+    }
+  } @else if $point==md {
+    @media (min-width: 960px) and (max-width: 1279px) {
+      @content;
+    }
+  } @else if $point==lg {
+    @media (min-width: 1280px) and (max-width: 1919px) {
+      @content;
+    }
+  } @else if $point==xl {
+    @media (min-width: 1920px) and (max-width: 5000px) {
+      @content;
+    }
+  } @else if $point==lt-sm {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $point==lt-md {
+    @media (max-width: 959px) {
+      @content;
+    }
+  } @else if $point==lt-lg {
+    @media (max-width: 1279px) {
+      @content;
+    }
+  } @else if $point==lt-xl {
+    @media (max-width: 1919px) {
+      @content;
+    }
+  } @else if $point==gt-xs {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $point==gt-sm {
+    @media (min-width: 960px) {
+      @content;
+    }
+  } @else if $point==gt-md {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $point==gt-lg {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+// Round
+@mixin rotate($val) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+
+@function is-direction($value) {
+  $is-keyword: index(
+    (
+      to top,
+      to top right,
+      to right top,
+      to right,
+      to bottom right,
+      to right bottom,
+      to bottom,
+      to bottom left,
+      to left bottom,
+      to left,
+      to left top,
+      to top left
+    ),
+    $value
+  );
+  $is-angle: type-of($value) == 'number' and
+    index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-keyword or $is-angle;
+}
+
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+  }
+
+  $conversion-map: (
+    to top: bottom,
+    to top right: bottom left,
+    to right top: left bottom,
+    to right: left,
+    to bottom right: top left,
+    to right bottom: left top,
+    to bottom: top,
+    to bottom left: top right,
+    to left bottom: right top,
+    to left: right,
+    to left top: right bottom,
+    to top left: bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
+  background: linear-gradient($direction, $color-stops);
+}

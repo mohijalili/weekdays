@@ -1,0 +1,37 @@
+// Typography
+// ─────────────────────────────────────
+$font-family: 'Proxima Nova', sans-serif !default;
+$font-size: 1rem !default;
+$font-color: #7b8796 !default;
+
+$font-light: 300 !default;
+$font-normal: 400 !default;
+$font-semi-thick: 600 !default;
+$font-thick: 700 !default;
+$font-thicker: 900 !default;
+
+$h1-font-size: $font-size * 2.5 !default;
+$h2-font-size: $font-size * 2 !default;
+$h3-font-size: $font-size * 1.75 !default;
+$h4-font-size: $font-size * 1.5 !default;
+$h5-font-size: $font-size * 1.25 !default;
+$h6-font-size: $font-size !default;
+
+$headings-font-family: inherit !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
+
+$lead-font-size: ($font-size * 1.25) !default;
+$lead-font-weight: 300 !default;
+
+$border-raduis: 7px !default;
+
+// Project Colors
+// ─────────────────────────────────────
+$colors: (
+  robinEggBlue: #00dcb4,
+  curiousBlue: #1e8cc8,
+  white: #ffffff,
+  black: #000000,
+);

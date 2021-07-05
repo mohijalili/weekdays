@@ -1,0 +1,69 @@
+@import 'styles-variables';
+
+body {
+  background: map-get($map: $colors, $key: bg);
+}
+
+$sizes: 48;
+
+@mixin margin-classes {
+  @for $i from 0 through $sizes {
+    $margin: $i * 0.25rem;
+    /* margin #{$margin} */
+    .m#{$i} {
+      margin: $margin !important;
+    }
+    .ml#{$i} {
+      margin-left: $margin !important;
+    }
+    .mr#{$i} {
+      margin-right: $margin !important;
+    }
+    .mt#{$i} {
+      margin-top: $margin !important;
+    }
+    .mb#{$i} {
+      margin-bottom: $margin !important;
+    }
+    .mx#{$i} {
+      margin-left: $margin !important;
+      margin-right: $margin !important;
+    }
+    .my#{$i} {
+      margin-top: $margin !important;
+      margin-bottom: $margin !important;
+    }
+  }
+}
+@include margin-classes;
+
+@mixin padding-classes {
+  @for $i from 0 through $sizes {
+    $padding: $i * 0.25rem;
+    /* padding #{$padding} */
+    .p#{$i} {
+      padding: $padding !important;
+    }
+    .pl#{$i} {
+      padding-left: $padding !important;
+    }
+    .pr#{$i} {
+      padding-right: $padding !important;
+    }
+    .pt#{$i} {
+      padding-top: $padding !important;
+    }
+    .pb#{$i} {
+      padding-bottom: $padding !important;
+    }
+    .px#{$i} {
+      padding-left: $padding !important;
+      padding-right: $padding !important;
+    }
+    .py#{$i} {
+      padding-top: $padding !important;
+      padding-bottom: $padding !important;
+    }
+  }
+}
+@include padding-classes;
