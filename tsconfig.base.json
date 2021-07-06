@@ -28,6 +28,9 @@
       "@study-smarter/web/shell/ui/day": ["libs/web/shell/ui/day/src/index.ts"],
       "@study-smarter/web/shell/ui/layout": [
         "libs/web/shell/ui/layout/src/index.ts"
+      ],
+      "@study-smarter/web/shell/ui/week": [
+        "libs/web/shell/ui/week/src/index.ts"
       ]
     }
   },
