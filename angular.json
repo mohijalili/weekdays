@@ -179,6 +179,37 @@
       "projectType": "library",
       "architect": {}
     },
+    "web-shared-data-access-models": {
+      "root": "libs/web/shared/data-access/models",
+      "sourceRoot": "libs/web/shared/data-access/models/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/workspace:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/web/shared/data-access/models",
+            "main": "libs/web/shared/data-access/models/src/index.ts",
+            "tsConfig": "libs/web/shared/data-access/models/tsconfig.lib.json",
+            "assets": ["libs/web/shared/data-access/models/*.md"]
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/web/shared/data-access/models/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/data-access/models"],
+          "options": {
+            "jestConfig": "libs/web/shared/data-access/models/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "web-shared-styles": {
       "root": "libs/web/shared/styles",
       "sourceRoot": "libs/web/shared/styles/src",

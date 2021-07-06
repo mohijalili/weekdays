@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/web/home/feature',
     '<rootDir>/libs/web/shell/ui/day',
     '<rootDir>/libs/web/shell/ui/week',
+    '<rootDir>/libs/web/shared/data-access/models',
   ],
 };
