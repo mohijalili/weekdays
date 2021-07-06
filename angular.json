@@ -241,7 +241,7 @@
           }
         }
       }
-    },
+    }
   },
   "cli": {
     "defaultCollection": "@nrwl/angular"
