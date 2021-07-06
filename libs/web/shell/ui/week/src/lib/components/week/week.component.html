@@ -1,1 +1,5 @@
-<p>week works!</p>
+<div class="weekdays">
+    <ng-template ngFor let-item [ngForOf]="weekDays">
+        <study-smarter-day [day]="item"></study-smarter-day>
+    </ng-template>
+</div>
