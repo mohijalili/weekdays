@@ -183,14 +183,7 @@
       "root": "libs/web/shared/styles",
       "sourceRoot": "libs/web/shared/styles/src",
       "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web/shared/styles/**/*.scss"]
-          }
-        }
-      }
+      "architect": {}
     },
     "web-shell-feature-web-shell": {
       "projectType": "library",
