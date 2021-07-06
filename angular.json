@@ -217,6 +217,47 @@
         }
       }
     },
+    "web-shell-ui-day": {
+      "projectType": "library",
+      "root": "libs/web/shell/ui/day",
+      "sourceRoot": "libs/web/shell/ui/day/src",
+      "prefix": "study-smarter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/web/shell/ui/day"],
+          "options": {
+            "project": "libs/web/shell/ui/day/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/web/shell/ui/day/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/web/shell/ui/day/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shell/ui/day"],
+          "options": {
+            "jestConfig": "libs/web/shell/ui/day/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shell/ui/day/src/**/*.ts",
+              "libs/web/shell/ui/day/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "web-shell-ui-layout": {
       "projectType": "library",
       "root": "libs/web/shell/ui/layout",
