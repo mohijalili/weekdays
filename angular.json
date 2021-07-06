@@ -198,22 +198,6 @@
       "sourceRoot": "libs/web/shell/feature/web-shell/src",
       "prefix": "study-smarter",
       "architect": {
-        "build": {
-          "builder": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/web/shell/feature/web-shell"],
-          "options": {
-            "project": "libs/web/shell/feature/web-shell/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/web/shell/feature/web-shell/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/web/shell/feature/web-shell/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/web/shell/feature/web-shell"],
@@ -239,22 +223,6 @@
       "sourceRoot": "libs/web/shell/ui/layout/src",
       "prefix": "study-smarter",
       "architect": {
-        "build": {
-          "builder": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/web/shell/ui/layout"],
-          "options": {
-            "project": "libs/web/shell/ui/layout/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/web/shell/ui/layout/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/web/shell/ui/layout/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/web/shell/ui/layout"],
@@ -273,7 +241,7 @@
           }
         }
       }
-    }
+    },
   },
   "cli": {
     "defaultCollection": "@nrwl/angular"

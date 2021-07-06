@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HomeModule } from "@study-smarter/web/home/feature";
-
+import { WebShellModule } from '@study-smarter/web/shell/feature/web-shell';
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, HomeModule],
+  imports: [BrowserModule, BrowserAnimationsModule, WebShellModule],
   providers: [],
   bootstrap: [AppComponent],
 })
