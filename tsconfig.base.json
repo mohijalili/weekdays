@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@study-smarter/web/shared/assets": [
+        "libs/web/shared/assets/src/index.ts"
+      ],
+      "@study-smarter/web/shared/styles": [
+        "libs/web/shared/styles/src/index.scss"
+      ],
       "@study-smarter/web/shell/feature/web-shell": [
         "libs/web/shell/feature/web-shell/src/index.ts"
       ],
