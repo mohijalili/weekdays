@@ -25,6 +25,7 @@
       "@study-smarter/web/shell/feature/web-shell": [
         "libs/web/shell/feature/web-shell/src/index.ts"
       ],
+      "@study-smarter/web/shell/ui/day": ["libs/web/shell/ui/day/src/index.ts"],
       "@study-smarter/web/shell/ui/layout": [
         "libs/web/shell/ui/layout/src/index.ts"
       ]
