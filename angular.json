@@ -210,6 +210,31 @@
         }
       }
     },
+    "web-shared-pipes-calendar-pipes": {
+      "projectType": "library",
+      "root": "libs/web/shared/pipes/calendar-pipes",
+      "sourceRoot": "libs/web/shared/pipes/calendar-pipes/src",
+      "prefix": "study-smarter",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/pipes/calendar-pipes"],
+          "options": {
+            "jestConfig": "libs/web/shared/pipes/calendar-pipes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/pipes/calendar-pipes/src/**/*.ts",
+              "libs/web/shared/pipes/calendar-pipes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "web-shared-pipes-sort-pipes": {
       "projectType": "library",
       "root": "libs/web/shared/pipes/sort-pipes",
