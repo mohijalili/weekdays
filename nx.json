@@ -40,6 +40,9 @@
     "web-shared-assets": {
       "tags": []
     },
+    "web-shared-data-access-models": {
+      "tags": []
+    },
     "web-shared-styles": {
       "tags": []
     },

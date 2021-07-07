@@ -1,0 +1,36 @@
+@import 'styles-variables';
+@import 'styles-mixins';
+
+$width: 60px;
+$round: 60px;
+
+.day {
+  &__time {
+    color: map-get($map: $colors, $key: white);
+    @include round($round);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $width;
+    height: $width;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      width: $width;
+      height: $width;
+      display: flex;
+      content: '';
+
+      $distance: 15deg;
+      $number: 12;
+      $color: map-get(
+        $map: $colors,
+        $key: white,
+      );
+      $thickness: 2px;
+
+      @include conic-gradient($distance, $number, $color, $thickness);
+    }
+  }
+}

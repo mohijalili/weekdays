@@ -19,6 +19,9 @@
       "@study-smarter/web/shared/assets": [
         "libs/web/shared/assets/src/index.ts"
       ],
+      "@study-smarter/web/shared/data-access/models": [
+        "libs/web/shared/data-access/models/src/index.ts"
+      ],
       "@study-smarter/web/shared/styles": [
         "libs/web/shared/styles/src/index.scss"
       ],

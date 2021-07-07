@@ -239,3 +239,19 @@
   );
   background: linear-gradient($direction, $color-stops);
 }
+
+@mixin conic-gradient(
+  $distance,
+  $numbers,
+  $color,
+  $thickness
+) {
+  @include round(50%);
+  background: repeating-conic-gradient(
+    #{$color} 0 calc(360deg / #{$numbers} - #{$distance}),
+    transparent 0 calc(360deg / #{$numbers})
+  );
+
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - #{$thickness}),#{$color} calc(100% - #{$thickness} + 1px));
+  mask:radial-gradient(farthest-side,transparent calc(100% - #{$thickness}),#{$color} calc(100% - #{$thickness} + 1px));
+}
