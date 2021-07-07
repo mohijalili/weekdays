@@ -7,5 +7,7 @@ module.exports = {
     '<rootDir>/libs/web/shell/ui/day',
     '<rootDir>/libs/web/shell/ui/week',
     '<rootDir>/libs/web/shared/data-access/models',
+    '<rootDir>/libs/web/shared/pipes/sort-pipes',
+    '<rootDir>/libs/web/shared/pipes/calendar-pipes',
   ],
 };

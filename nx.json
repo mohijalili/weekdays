@@ -43,6 +43,12 @@
     "web-shared-data-access-models": {
       "tags": []
     },
+    "web-shared-pipes-calendar-pipes": {
+      "tags": []
+    },
+    "web-shared-pipes-sort-pipes": {
+      "tags": []
+    },
     "web-shared-styles": {
       "tags": []
     },

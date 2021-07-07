@@ -210,6 +210,88 @@
         }
       }
     },
+    "web-shared-pipes-calendar-pipes": {
+      "projectType": "library",
+      "root": "libs/web/shared/pipes/calendar-pipes",
+      "sourceRoot": "libs/web/shared/pipes/calendar-pipes/src",
+      "prefix": "study-smarter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/web/shared/pipes/calendar-pipes"],
+          "options": {
+            "project": "libs/web/shared/pipes/calendar-pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/web/shared/pipes/calendar-pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/web/shared/pipes/calendar-pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/pipes/calendar-pipes"],
+          "options": {
+            "jestConfig": "libs/web/shared/pipes/calendar-pipes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/pipes/calendar-pipes/src/**/*.ts",
+              "libs/web/shared/pipes/calendar-pipes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "web-shared-pipes-sort-pipes": {
+      "projectType": "library",
+      "root": "libs/web/shared/pipes/sort-pipes",
+      "sourceRoot": "libs/web/shared/pipes/sort-pipes/src",
+      "prefix": "study-smarter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/web/shared/pipes/sort-pipes"],
+          "options": {
+            "project": "libs/web/shared/pipes/sort-pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/web/shared/pipes/sort-pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/web/shared/pipes/sort-pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/pipes/sort-pipes"],
+          "options": {
+            "jestConfig": "libs/web/shared/pipes/sort-pipes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/pipes/sort-pipes/src/**/*.ts",
+              "libs/web/shared/pipes/sort-pipes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "web-shared-styles": {
       "root": "libs/web/shared/styles",
       "sourceRoot": "libs/web/shared/styles/src",
