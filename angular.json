@@ -216,6 +216,22 @@
       "sourceRoot": "libs/web/shared/pipes/calendar-pipes/src",
       "prefix": "study-smarter",
       "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/web/shared/pipes/calendar-pipes"],
+          "options": {
+            "project": "libs/web/shared/pipes/calendar-pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/web/shared/pipes/calendar-pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/web/shared/pipes/calendar-pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/web/shared/pipes/calendar-pipes"],
@@ -241,6 +257,22 @@
       "sourceRoot": "libs/web/shared/pipes/sort-pipes/src",
       "prefix": "study-smarter",
       "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/web/shared/pipes/sort-pipes"],
+          "options": {
+            "project": "libs/web/shared/pipes/sort-pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/web/shared/pipes/sort-pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/web/shared/pipes/sort-pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/web/shared/pipes/sort-pipes"],
