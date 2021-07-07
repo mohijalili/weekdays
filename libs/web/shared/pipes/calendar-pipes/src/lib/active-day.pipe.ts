@@ -8,7 +8,7 @@ import { ICalendar } from '@study-smarter/web/shared/data-access/models';
 })
 export class ActiveDayPipe implements PipeTransform {
   transform(value: string): boolean {
-    return value === this.weekName ? true : false;
+    return value === this.weekName;
   }
 
   get weekName() {
