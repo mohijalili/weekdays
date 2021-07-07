@@ -22,6 +22,9 @@
       "@study-smarter/web/shared/data-access/models": [
         "libs/web/shared/data-access/models/src/index.ts"
       ],
+      "@study-smarter/web/shared/pipes/sort-pipes": [
+        "libs/web/shared/pipes/sort-pipes/src/index.ts"
+      ],
       "@study-smarter/web/shared/styles": [
         "libs/web/shared/styles/src/index.scss"
       ],

@@ -210,6 +210,31 @@
         }
       }
     },
+    "web-shared-pipes-sort-pipes": {
+      "projectType": "library",
+      "root": "libs/web/shared/pipes/sort-pipes",
+      "sourceRoot": "libs/web/shared/pipes/sort-pipes/src",
+      "prefix": "study-smarter",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/pipes/sort-pipes"],
+          "options": {
+            "jestConfig": "libs/web/shared/pipes/sort-pipes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/pipes/sort-pipes/src/**/*.ts",
+              "libs/web/shared/pipes/sort-pipes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "web-shared-styles": {
       "root": "libs/web/shared/styles",
       "sourceRoot": "libs/web/shared/styles/src",
