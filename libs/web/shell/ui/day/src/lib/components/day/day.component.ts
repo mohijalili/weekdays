@@ -9,4 +9,5 @@ import { Calendar } from '@study-smarter/web/shared/data-access/models';
 })
 export class DayComponent {
   @Input() day!: string | Calendar.WeekDay;
+  @Input() active = false;
 }

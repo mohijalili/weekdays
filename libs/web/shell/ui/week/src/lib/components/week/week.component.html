@@ -1,5 +1,5 @@
 <div class="weekdays">
     <ng-template ngFor let-item [ngForOf]="weekDays | sortBy: startDate">
-        <study-smarter-day [day]="item"></study-smarter-day>
+        <study-smarter-day [day]="item" [active]="item | activeDay"></study-smarter-day>
     </ng-template>
 </div>
