@@ -2,7 +2,7 @@
 
 # StudySmarter
 
-This project was generated using [Nx](https://nx.dev).
+A modern Angular calendar application built with Nx monorepo architecture for enhanced productivity and learning management.
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
